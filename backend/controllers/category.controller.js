@@ -31,11 +31,11 @@ exports.create = (req, res) => {
 				// throw new Error('duplicate error')
 
 				//todo: передавать на фронт ошибку
-				res.status(400).send({
+				res.status(500).json({
 					error: 'Some error occurred while creating the Category.',
 					message:
 						err.message || "duplicate error"
-				});
+				})
 			} else
 				res.status(500).send({
 					error: 'Some error occurred while creating the Category.',

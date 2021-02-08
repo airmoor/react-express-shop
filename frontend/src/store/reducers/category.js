@@ -21,9 +21,8 @@ const reducer = (state = initialState, action) => {
 			return { ...state, category: {...state.category, products: [...action.products] } };
 		case actionTypes.DELETE_CATEGORY:
 			return { ...state, categories: state.categories.slice(1) };
-
+		default: return state
 	}
-	return state;
 };
 
 export default reducer;

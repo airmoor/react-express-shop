@@ -3,6 +3,7 @@ import { debounce } from "debounce";
 
 export const checkCategoryTitleExists = (text) => {
 	let isExists = false;
+	console.log('debounce:',text)
 
 	CategoryDataService.checkTitle(text)
 		.then(response => {

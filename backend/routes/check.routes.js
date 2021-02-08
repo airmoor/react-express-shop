@@ -6,7 +6,6 @@ module.exports = app => {
 	// Find if unique name
 	router.get("/category/:title", categories.checkTitle);
 
-	// Create a new Tutorial
 	// router.get("/check/product/:title", products.checkTitle);
 
 	app.use('/api/check', router);

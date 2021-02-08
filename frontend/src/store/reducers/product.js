@@ -16,8 +16,8 @@ const reducer = (state = initialState, action) => {
 			return { ...state, product: {...action.product} };
 		case actionTypes.UPDATE_PRODUCT:
 			return { ...state, product: {...action.product} };
+		default: return state;
 	}
-	return state;
 };
 
 export default reducer;
