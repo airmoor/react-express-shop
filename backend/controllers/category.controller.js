@@ -49,7 +49,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
 	const searched = req.query.title;
 	// if (searched) searched.toLowerCase();
-
+	//todo compare without register
 	const select = 'SELECT categories.*, COUNT(products.id) AS productsCount FROM categories left OUTER JOIN  products ON categories.id=products."categoryId" GROUP BY categories.id;'
 	db.sequelize.query(select)
 		.then(results => {

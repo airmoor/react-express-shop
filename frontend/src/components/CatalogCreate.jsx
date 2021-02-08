@@ -29,12 +29,10 @@ class CatalogCreate extends React.Component {
 		this.setState({
 			title: e.target.value
 		});
-		console.log('hueta', isCategoryTitleExists(e.target.value))
 		this.setState({
 			isTitleExists: isCategoryTitleExists(e.target.value)
 		});
 	}
-
 
 	onChangeDescription(e) {
 		this.setState({
